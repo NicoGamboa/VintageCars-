@@ -1,0 +1,49 @@
+.closeButton{
+  position: relative;
+  left:60px;
+  bottom: 60px;
+  color: black;
+}
+.parrafo{
+  padding: 25px 15px 0px 10px;
+  color:  #5b3b2c;
+  text-decoration: none;
+  font-family: "MonteCarlo", cursive;
+  font-weight: 600;
+}
+#dropdown-split-basic{
+  background-color: #5b3b2c;
+  border-color: #5b3b2c;
+}
+.perfil-utils{
+  display: flex;
+}
+.perfil-usuario{
+  margin-left: 30px;
+  display: flex;
+  padding-right: 0rem!important;
+  padding-left: 0rem!important;
+  padding-bottom: 20px;
+  align-self: center;
+}
+
+h6{
+  font-size: 1rem;
+}
+.styleDivName {
+  margin-top: 14px;
+  background-color: #5b3b2c;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.styleP {
+  font-family: Quicksand;
+  font-weight: Bold;
+  font-size: 15px;
+  margin: 0 auto;
+  color: white;
+}

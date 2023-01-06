@@ -1,0 +1,10 @@
+.closeBoton{
+    position: relative;
+    left: 41%;
+    bottom: 30px;
+    color: black !important;
+    
+}
+.formularioButton{
+ background-color:#5b3b2c !important;
+}

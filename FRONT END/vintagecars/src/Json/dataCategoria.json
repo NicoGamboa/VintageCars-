@@ -1,0 +1,35 @@
+[
+    {
+        "id":1,
+        
+            "nombre":"Deportivo",
+            "descripcion":"1.206  Autos",
+            "img":"https://i.ibb.co/jTrPtRR/1408439037-812790-1408439090-noticia-grande-980x616.jpg"
+   
+        
+    },
+    {
+        "id":2,
+        
+            "nombre":"Clásicos Americanos",
+            "descripcion":"1.206  Autos",
+            "img":"https://i.ibb.co/fMhL9nL/istockphoto-919144612-612x612.jpg"
+        
+    },
+    {
+        "id":3,
+      
+            "nombre":"Clásicos Europeos",
+            "descripcion":"1.206  Autos",
+            "img":"https://i.ibb.co/zVCrBLk/CAR2.jpg"
+    
+    },
+    {
+        "id":4,
+      
+            "nombre":"Camionetas",
+            "descripcion":"1.206  Autos",
+            "img":"https://i.ibb.co/Tv67DqF/084d86409753c7c30047c649cd0b8e3d22.jpg"
+        
+    }
+]

@@ -1,0 +1,83 @@
+stages:
+    - build
+    - deploy
+    - build-front
+    - deploy-front
+
+build:
+    stage: build
+    image:  maven:3.8.6-openjdk-18
+    script:
+        - echo "Building app..."
+        - cd "BACK END/Vintage-Car"
+        - mvn clean install
+        - echo "Finished building the app."
+    artifacts:
+        expire_in: 1 week
+        paths:
+            - "BACK END/Vintage-Car/target/"
+    only:
+        - main
+
+
+deploy:
+    stage: deploy
+    image: alpine:3.11
+    before_script:
+        - apk update && apk add openssh-client bash
+        - mkdir -p ~/.ssh
+        - eval $(ssh-agent -s)
+        - echo -e "$SSH_BACK_PRIVATE_KEY"| tr -d '\r' | ssh-add - > /dev/null
+        - touch ~/.ssh/config
+        - echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config
+        - ssh-keyscan -H $DEPLOY_SERVER_IP >> ~/.ssh/known_hosts
+    script:
+        - echo "Deploying started..."
+        - ssh ubuntu@$DEPLOY_SERVER_IP "sudo /tmp/apache-tomcat-9.0.68/bin/shutdown.sh; sudo rm -r /tmp/apache-tomcat-9.0.68/webapps/*" 
+        - scp -i INFRA/vintageCar.pem "BACK END/Vintage-Car/target/vintage.war" ubuntu@$DEPLOY_SERVER_IP:/tmp/apache-tomcat-9.0.68/webapps
+        - ssh ubuntu@$DEPLOY_SERVER_IP "sudo /tmp/apache-tomcat-9.0.68/bin/startup.sh"
+        - echo "Finished deploying the app"
+    only:
+        - main
+
+build-front:
+    stage: build-front
+    image: ubuntu:latest
+    script:
+        - echo "Building app..."
+        - cd "FRONT END/vintagecars"
+        - apt-get update
+        - apt-get install nodejs -y
+        - apt-get install npm -y
+        - npm install -y
+        - CI=false npm run build
+        - echo "Finished building the app."
+        - apt install rar
+        - cd build; rar a vintage.rar *
+    artifacts:
+        expire_in: 1 week
+        paths:
+            - "FRONT END/vintagecars/build"
+    only:
+        - main
+    timeout: 3 hours 30 minutes
+
+deploy-front:
+    stage: deploy-front
+    image: alpine:3.11
+    before_script:
+        - apk update && apk add openssh-client bash
+        - mkdir -p ~/.ssh
+        - eval $(ssh-agent -s)
+        - echo -e "$SSH_BACK_PRIVATE_KEY"| tr -d '\r' | ssh-add - > /dev/null
+        - touch ~/.ssh/config
+        - echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config
+        - ssh-keyscan -H $DEPLOY_SERVER_IP_FRONT >> ~/.ssh/known_hosts
+    script:
+        - echo "Deploying started..." 
+        - ssh ubuntu@$DEPLOY_SERVER_IP_FRONT "sudo rm -r /var/www/html/*" 
+        - scp -i INFRA/vintageCar.pem "FRONT END/vintagecars/build/vintage.rar" ubuntu@$DEPLOY_SERVER_IP_FRONT:/var/www/html  
+        - ssh ubuntu@$DEPLOY_SERVER_IP_FRONT "cd /var/www/html; unrar x vintage.rar; sudo /etc/init.d/apache2 restart"
+        - echo "Finished deploying the app"
+    only:
+        - main

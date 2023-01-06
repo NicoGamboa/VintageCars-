@@ -1,0 +1,156 @@
+  .contenedorbuscador {
+    width: 100%;
+    height: 100%;
+    padding-top: 3%;
+    margin-top: 97px;
+  }
+  .input-calendario{
+    width: 10rem;
+    height: 2.5rem;
+    margin-left: 3.3rem;
+    background-color: white;
+    border: none;
+    position: absolute;
+}
+  .boton{
+    cursor: pointer;
+  }
+  .contenedorbotones {
+    width: 280px;
+    height: 250px;
+    background-color: rgb(75, 55, 29);
+    border-radius: 5%;
+    position: relative;
+    left: 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+.calendarioDoble {
+  border: none;
+  margin-top: 10px;
+  padding: 0px 10px;
+  position: relative;
+}
+
+  .desplegable{
+    padding-left: 1rem;
+    width: 15rem;
+    height: 2.5rem;
+    display:flex;
+    border-radius: 0.43rem;
+    background-color:  white;
+    border-color: white;
+    color: black;
+  }
+
+  .inputciudades{
+    
+    width: 10rem;
+    height: 2.5rem;
+    margin-left: 1rem;
+    background-color:white;
+    border:none;
+  }
+
+  .iconobuscador{
+    position :relative;
+    top:14px;
+    left:5px;
+    
+
+  }
+  .react-datepicker__input-container{
+     width: 10% !important;
+  }
+  @media (max-width: 450px){
+
+    .desplegable{
+      bottom: -0.9rem;
+      left: 3.5%;
+    }
+  }
+  
+  .FechaRetirolabel{
+    display:flex;
+    width: 15rem;
+    height: 2.5rem;
+    border-radius: 0.43rem;
+    background-color: white;
+    border-color: #ddd;
+    color: black;
+  }
+  .calendario{
+    margin-left:8px;
+    margin-top:10px;
+    width: 50px;
+    color:gray
+  }
+  .FechaRetiro{
+    background-color: white;
+    border:grey;
+    width: 9rem;
+    height: 2rem;
+    margin-left: 5px;
+    margin-top:1px;
+    margin-bottom: 100px;
+  }
+
+  
+  .FechaRetirolabel2{
+    display:flex;
+    width: 15rem;
+    height: 2.5rem;
+    border-radius: 0.43rem;
+    background-color: white;
+    border-color: #ddd;
+    color: black;
+  }
+
+  .calendario2 {
+    top: 10px;
+    left: 8px;
+    width: 50px;
+    color: gray;
+    position: relative;
+}
+  .FechaEntrega{
+    background-color: white;
+    border:grey;
+    width: 9rem;
+    height: 2rem;
+    margin-left: 5px;
+    margin-top:1px;
+    margin-bottom: 100px;
+
+  }
+  .titulobuscador{
+      margin: 20px 0 10px 0;
+      color: white;
+  }
+  .boton{
+    width: 100px;
+    height: 40px;
+    background-color: black;
+    color: #ddd;
+  }
+  .Fechacalendario{
+    position: relative;
+  }
+  .form-group{
+    width: 1000px;
+  }
+  @media(max-width: 480px){
+    .contenedorbuscador{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+    }
+    .contenedorbotones{
+      position: relative;
+      left: 0px;
+    }
+
+  }

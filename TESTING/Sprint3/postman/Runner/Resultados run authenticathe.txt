@@ -1,0 +1,80 @@
+{
+	"id": "6d428835-0044-4a70-b165-cff6a047111a",
+	"name": "Sprint 3",
+	"timestamp": "2022-12-11T22:28:27.933Z",
+	"collection_id": "24571032-2cb897bc-1323-48e7-84a1-ed8e85cfd60c",
+	"folder_id": "24571032-042048e1-6668-40a9-a952-5e5f2354f11f",
+	"environment_id": "24571032-9b6062f2-191f-4f0a-912b-596b7ee2adf6",
+	"totalPass": 2,
+	"totalFail": 0,
+	"results": [
+		{
+			"id": "25ed69b5-29e1-4bd9-ac71-0661e9426ec3",
+			"name": "Post authenticathe",
+			"url": "http://3.14.246.73:8080/vintage/authenticate",
+			"time": 771,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				771
+			],
+			"allTests": [
+				{
+					"Status code is 200": true
+				}
+			]
+		},
+		{
+			"id": "48529acd-12cb-4ca1-b454-c12af556b7e8",
+			"name": "Post authenticathe (USUARIO SIN PERMISOS)",
+			"url": "http://3.14.246.73:8080/vintage/authenticate",
+			"time": 306,
+			"responseCode": {
+				"code": 403,
+				"name": "Forbidden"
+			},
+			"tests": {
+				"Status code is 403": true
+			},
+			"testPassFailCounts": {
+				"Status code is 403": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				306
+			],
+			"allTests": [
+				{
+					"Status code is 403": true
+				}
+			]
+		}
+	],
+	"count": 1,
+	"totalTime": 1077,
+	"collection": {
+		"requests": [
+			{
+				"id": "25ed69b5-29e1-4bd9-ac71-0661e9426ec3",
+				"method": "POST"
+			},
+			{
+				"id": "48529acd-12cb-4ca1-b454-c12af556b7e8",
+				"method": "POST"
+			}
+		]
+	}
+}

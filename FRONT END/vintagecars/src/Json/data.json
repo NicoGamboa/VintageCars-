@@ -1,0 +1,75 @@
+[
+    {
+        "id": 1,
+        "img": "https://i.ibb.co/zH7HMQK/pngwing-1.png",
+        "category": "Clasico Británico",
+        "title": "Seat 600 - Fiat 500",
+        "location": "Buenos Aires",
+        "description": "The door is opening! how exciting oh, it's you, meh meow loudly just to annoy owners hiss and stare at nothing then run suddenly away"
+    },
+    {
+        "id": 2,
+        "img": "https://i.ibb.co/THNSdQK/auto-Mercedes-removebg-preview-1.png",
+        "category": "Clásico Americano",
+        "title": "Mercedes Benz 280",
+        "location": "Cordoba",
+        "description": "The door is opening! how exciting oh, it's you, meh meow loudly just to annoy owners hiss and stare at nothing then run suddenly away"
+    
+    },
+    {
+
+        "id": 3,
+        "img": "https://i.ibb.co/qM2HsF1/1970-ss-chevelle-chevelle-ss-1970-chevrolet-removebg-preview-1.png",
+        "category": "Deportivos",
+        "title": "Chevrolet 1970 SS",
+        "location": "Mendoza",
+        "description": "The door is opening! how exciting oh, it's you, meh meow loudly just to annoy owners hiss and stare at nothing then run suddenly away"
+    
+        
+    },
+    {
+        "id": 4,
+        "img": "https://i.ibb.co/SVycPx0/Png-Item-1770801.png",
+        "category": "Camionetas",
+        "title": "Chevrolet 1938 1/2 Ton",
+        "location": "Mendoza",
+        "description": "The door is opening! how exciting oh, it's you, meh meow loudly just to annoy owners hiss and stare at nothing then run suddenly away"
+    
+    },
+    {
+        "id": 5,
+        "img": "https://i.ibb.co/K9gGYW1/car-1366829-640.png",
+        "category": "Clasico Británico",
+        "title": "Seat 600 - Fiat 500",
+        "location": "Santa Fe",
+        "description": "The door is opening! how exciting oh, it's you, meh meow loudly just to annoy owners hiss and stare at nothing then run suddenly away"
+    
+        
+    },
+    {
+        "id": 6,
+        "img": "https://i.ibb.co/6ghG8Zn/Png-Item-654468.png",
+        "category": "Clásico Americano",
+        "title": "Mercedes Benz 280",
+        "location": "Buenos Aires",
+        "description": "The door is opening! how exciting oh, it's you, meh meow loudly just to annoy owners hiss and stare at nothing then run suddenly away"
+    },
+    { 
+        "id": 7,
+        "img": "https://i.ibb.co/rxb38X8/Png-Item-1387238.png",
+        "category": "Deportivos",
+        "title": "Chevrolet 1970 SS",
+        "location": "Mendoza",
+        "description": "The door is opening! how exciting oh, it's you, meh meow loudly just to annoy owners hiss and stare at nothing then run suddenly away"
+
+    },
+    {
+        "id": 8,
+        "img": "https://i.ibb.co/1QHCqWf/Png-Item-1387345.png",
+        "category": "Camionetas",
+        "title": "Chevrolet 1938 1/2 Ton",
+        "location": "Mendoza",
+        "description": "The door is opening! how exciting oh, it's you, meh meow loudly just to annoy owners hiss and stare at nothing then run suddenly away"
+
+    }
+]

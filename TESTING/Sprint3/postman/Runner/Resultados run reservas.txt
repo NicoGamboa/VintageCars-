@@ -1,0 +1,266 @@
+{
+	"id": "4e22c0ba-af0e-4cd6-9d6c-898494f7ce52",
+	"name": "Sprint 3",
+	"timestamp": "2022-12-11T22:27:22.220Z",
+	"collection_id": "24571032-2cb897bc-1323-48e7-84a1-ed8e85cfd60c",
+	"folder_id": "24571032-6d318949-bc07-41fe-b66e-1087185d3331",
+	"environment_id": "24571032-9b6062f2-191f-4f0a-912b-596b7ee2adf6",
+	"totalPass": 8,
+	"totalFail": 0,
+	"results": [
+		{
+			"id": "9991a9b2-63ee-4c45-8902-549d45cdd600",
+			"name": "Get reservas por usuario",
+			"url": "http://3.14.246.73:8080/vintage/reserva/usuario_id/32",
+			"time": 442,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				442
+			],
+			"allTests": [
+				{
+					"Status code is 200": true
+				}
+			]
+		},
+		{
+			"id": "81fa2358-60a8-4604-9415-6c4f66d354fc",
+			"name": "Get reservas por filtrada por producto",
+			"url": "http://3.14.246.73:8080/vintage/reserva/producto_id/2",
+			"time": 439,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				439
+			],
+			"allTests": [
+				{
+					"Status code is 200": true
+				}
+			]
+		},
+		{
+			"id": "c6e2577e-dc3c-4f28-bcbb-e957da1309f3",
+			"name": "Get reservas",
+			"url": "http://3.14.246.73:8080/vintage/reserva",
+			"time": 873,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				873
+			],
+			"allTests": [
+				{
+					"Status code is 200": true
+				}
+			]
+		},
+		{
+			"id": "ddd76015-f6ea-46f2-add8-80fbb8bd4597",
+			"name": "Get reserva por ID",
+			"url": "http://3.14.246.73:8080/vintage/reserva/2",
+			"time": 218,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				218
+			],
+			"allTests": [
+				{
+					"Status code is 200": true
+				}
+			]
+		},
+		{
+			"id": "139a114f-0793-4216-9ffd-87b4f9e508d3",
+			"name": "Post reservas",
+			"url": "http://3.14.246.73:8080/vintage/reserva",
+			"time": 239,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				239
+			],
+			"allTests": [
+				{
+					"Status code is 200": true
+				}
+			]
+		},
+		{
+			"id": "dfcbeef2-034e-4df2-99a1-37386b8587d2",
+			"name": "Put reservas",
+			"url": "http://3.14.246.73:8080/vintage/reserva",
+			"time": 242,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				242
+			],
+			"allTests": [
+				{
+					"Status code is 200": true
+				}
+			]
+		},
+		{
+			"id": "b1288c07-9e7f-44be-8c37-243622316431",
+			"name": "Delete Reserva",
+			"url": "http://3.14.246.73:8080/vintage/reserva/86",
+			"time": 247,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				247
+			],
+			"allTests": [
+				{
+					"Status code is 200": true
+				}
+			]
+		},
+		{
+			"id": "0cb1d86f-6e37-44ea-a40a-cccc3cb53e77",
+			"name": "Post reserva (NO ADMIN)",
+			"url": "http://3.14.246.73:8080/vintage/reserva",
+			"time": 193,
+			"responseCode": {
+				"code": 403,
+				"name": "Forbidden"
+			},
+			"tests": {
+				"Status code is 403": true
+			},
+			"testPassFailCounts": {
+				"Status code is 403": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				193
+			],
+			"allTests": [
+				{
+					"Status code is 403": true
+				}
+			]
+		}
+	],
+	"count": 1,
+	"totalTime": 2893,
+	"collection": {
+		"requests": [
+			{
+				"id": "9991a9b2-63ee-4c45-8902-549d45cdd600",
+				"method": "GET"
+			},
+			{
+				"id": "81fa2358-60a8-4604-9415-6c4f66d354fc",
+				"method": "GET"
+			},
+			{
+				"id": "c6e2577e-dc3c-4f28-bcbb-e957da1309f3",
+				"method": "GET"
+			},
+			{
+				"id": "ddd76015-f6ea-46f2-add8-80fbb8bd4597",
+				"method": "GET"
+			},
+			{
+				"id": "139a114f-0793-4216-9ffd-87b4f9e508d3",
+				"method": "POST"
+			},
+			{
+				"id": "dfcbeef2-034e-4df2-99a1-37386b8587d2",
+				"method": "PUT"
+			},
+			{
+				"id": "b1288c07-9e7f-44be-8c37-243622316431",
+				"method": "DELETE"
+			},
+			{
+				"id": "0cb1d86f-6e37-44ea-a40a-cccc3cb53e77",
+				"method": "POST"
+			}
+		]
+	}
+}

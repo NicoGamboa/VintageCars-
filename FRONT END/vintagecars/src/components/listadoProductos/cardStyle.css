@@ -1,0 +1,150 @@
+.cardImg{
+    width: 280px;
+    border-radius: 10px;
+    padding-right: 10px;
+    margin-left: 30px;
+}
+button{
+    font-size: 1em;
+    background-color: rgba(91, 59, 44, 0.8);
+    cursor: pointer;
+    margin: 1em;
+    border: 0ch;
+    padding: 4px 12px;
+    color: aliceblue;
+    border-radius: 3px;
+}
+button:hover{
+    background-color: #5b3b2c;;
+}
+.cardContainer{
+    display: flex;
+    width: 600px;
+    height: 300px;
+    border-radius: 10px;
+    margin-top: 15px;
+    box-shadow: 0px 10px 10px -6px black;
+    background-color: white;
+    align-items: center;
+    
+    
+}
+.cardContainer:hover{
+    scale:102%;
+}
+.section{
+    max-width: 1366px;
+ margin: 0 auto;
+}
+
+
+.eliminarFiltros{
+    cursor: pointer;
+    font-size: 15px;
+    position: relative;
+    bottom: 118px;
+    left: 50px;
+    background-color: #5B3B2C;
+}
+
+.btn-group {
+    display: block;
+}
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    padding-bottom: 150px;
+}
+
+b{
+    font-family: "roboto";
+    font-weight: 600;
+    font-size: 24px;
+  }
+ 
+
+@media(max-width: 600px){
+    .eliminarFiltros{
+        position: static;
+        background-color: #5B3B2C;
+    }
+    .cardImg {
+        height: 20vh;
+        width: 25vh;
+    }
+    .cardContainer{
+        width:90%;
+        height: 300px;
+    }
+    .card-text{
+        font-size: 1.5vh;
+    }
+    .card-title{
+        font-size: 2.3vh;
+    }
+        
+}
+@media(max-width: 480px){
+    .cardContainer {
+        flex-direction: column;
+        width: 80%;
+        height: 400px;
+        padding-top: 20px;
+    }
+}
+@media (min-width:600px) and (max-width:1000px){
+    p{
+        font-size: 13px;
+    }
+}
+@media (min-width:1000px) and (max-width:1200px){
+    p{
+        font-size: 13px;
+    }
+    p.card-text.listado-autos {
+        padding: 0 0.5em;
+    }
+    
+    .cardImg {
+        width: 220px;
+    }
+    .cardContainer {
+            width: 450px;
+            margin-top: 15px;
+            margin-left: 15px;    
+}
+}
+@media (min-width:1200px) and (max-width:1400px){
+    p{
+        font-size: 13px;
+    }
+    
+    .cardImg {
+        width: 240px;
+    }
+    .cardContainer {
+            width: 500px;
+            margin-top: 15px;
+            margin-left: 15px;    
+}
+}
+@media (min-width: 1400px){
+    .cardContainer{
+        margin-left: 15px;
+    }
+    .listado-autos {
+        left: 10%;
+        position: relative;
+        justify-content: center;
+        text-align: center;
+        width: 80%;
+        font-size: small;
+    }
+    
+}
+.categoria-auto{
+    color:#5B3B2C ;
+  } 

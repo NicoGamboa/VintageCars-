@@ -1,0 +1,5 @@
+[2022-12-11 15:55:12] [ INFO ] [ProductoService:79] Verificamos si existen la categoria, la ciudad 
+[2022-12-11 15:55:12] [ INFO ] [CategoriaService:32] Buscando Categoria id: 2
+[2022-12-11 15:55:13] [ INFO ] [CiudadService:27] Buscando ciudad por id: 2
+[2022-12-11 15:55:14] [ INFO ] [ProductoService:82] La categoria y la ciudad  existen, entonces cargamos el producto
+[2022-12-11 15:55:31] [ INFO ] [ProductoService:43] Buscando Producto id: 111

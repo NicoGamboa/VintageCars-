@@ -1,0 +1,649 @@
+{
+	"info": {
+		"_postman_id": "5383c0f9-fbe8-40e2-bab9-4cd08057a434",
+		"name": "Sprint 3",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24571032"
+	},
+	"item": [
+		{
+			"name": "Authentication",
+			"item": [
+				{
+					"name": "Post authenticathe",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.environment.set(\"JWT\", pm.response.json().jwt)\r",
+									"\r",
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\":\"fernandopajon06@gmail.com\",\r\n    \"password\":\"789456\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://3.14.246.73:8080/vintage/authenticate",
+							"protocol": "http",
+							"host": [
+								"3",
+								"14",
+								"246",
+								"73"
+							],
+							"port": "8080",
+							"path": [
+								"vintage",
+								"authenticate"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Post authenticathe (USUARIO SIN PERMISOS)",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 403\", function () {\r",
+									"    pm.response.to.have.status(403);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\":\"simpson_homero_jimeno@gmail.com\",\r\n    \"password\":\"holaholahola\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{AUTH_URL}}",
+							"host": [
+								"{{AUTH_URL}}"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "usuarios",
+			"item": [
+				{
+					"name": "Get usuarios",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL}}/usuario",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"usuario"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get usuarios por ID",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://3.14.246.73:8080/vintage/usuario/32",
+							"protocol": "http",
+							"host": [
+								"3",
+								"14",
+								"246",
+								"73"
+							],
+							"port": "8080",
+							"path": [
+								"vintage",
+								"usuario",
+								"32"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Post usuario",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(201);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{JWT}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \r\n    \"nombre\": \"Homero\",\r\n    \"apellido\": \"Simpson Del Lago Del Terror\",\r\n    \"email\": \"fernandopajon08@gmail.com\",\r\n    \"password\": \"$2a$10$izsmqq1Iqf026lNxNTiJ1.iARUIcqSpbVz3ieXpBu4YQz6HCnh8re\",\r\n    \"rol\": {\r\n        \"id\": 2,\r\n        \"nombre\": \"ROLE_USER\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://3.14.246.73:8080/vintage/usuario",
+							"protocol": "http",
+							"host": [
+								"3",
+								"14",
+								"246",
+								"73"
+							],
+							"port": "8080",
+							"path": [
+								"vintage",
+								"usuario"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Del usuario",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJ2ZXJpZmljYWRvIjp0cnVlLCJzdWIiOiJmZXJuYW5kb3Bham9uMDZAZ21haWwuY29tIiwibmFtZSI6IkZlcm5hbmRvIiwibGFzdF9uYW1lIjoiUGFqb24iLCJpZCI6MzIsImV4cCI6MTY3MDc4NDE4MywiaWF0IjoxNjcwNzgwNTgzLCJyb2wiOnsiaWQiOjEsIm5vbWJyZSI6IlJPTEVfQURNSU4ifX0.X8xWB5nTgO0e8-D0wN-L1O5zG636LUv1EOYN_SH_ELA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://3.14.246.73:8080/vintage/usuario/63",
+							"protocol": "http",
+							"host": [
+								"3",
+								"14",
+								"246",
+								"73"
+							],
+							"port": "8080",
+							"path": [
+								"vintage",
+								"usuario",
+								"63"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "reservas",
+			"item": [
+				{
+					"name": "filtros",
+					"item": [
+						{
+							"name": "Get reservas por usuario",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Status code is 200\", function () {\r",
+											"    pm.response.to.have.status(200);\r",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://3.14.246.73:8080/vintage/reserva/usuario_id/32",
+									"protocol": "http",
+									"host": [
+										"3",
+										"14",
+										"246",
+										"73"
+									],
+									"port": "8080",
+									"path": [
+										"vintage",
+										"reserva",
+										"usuario_id",
+										"32"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get reservas por filtrada por producto",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Status code is 200\", function () {\r",
+											"    pm.response.to.have.status(200);\r",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://3.14.246.73:8080/vintage/reserva/producto_id/2",
+									"protocol": "http",
+									"host": [
+										"3",
+										"14",
+										"246",
+										"73"
+									],
+									"port": "8080",
+									"path": [
+										"vintage",
+										"reserva",
+										"producto_id",
+										"2"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Get reservas",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://3.14.246.73:8080/vintage/reserva",
+							"protocol": "http",
+							"host": [
+								"3",
+								"14",
+								"246",
+								"73"
+							],
+							"port": "8080",
+							"path": [
+								"vintage",
+								"reserva"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get reserva por ID",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://3.14.246.73:8080/vintage/reserva/2",
+							"protocol": "http",
+							"host": [
+								"3",
+								"14",
+								"246",
+								"73"
+							],
+							"port": "8080",
+							"path": [
+								"vintage",
+								"reserva",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Post reservas",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ2ZXJpZmljYWRvIjp0cnVlLCJzdWIiOiJmZXJuYW5kb3Bham9uMDZAZ21haWwuY29tIiwibmFtZSI6IkZlcm5hbmRvIiwibGFzdF9uYW1lIjoiUGFqb24iLCJpZCI6MzIsImV4cCI6MTY3MDc4NDE4MywiaWF0IjoxNjcwNzgwNTgzLCJyb2wiOnsiaWQiOjEsIm5vbWJyZSI6IlJPTEVfQURNSU4ifX0.X8xWB5nTgO0e8-D0wN-L1O5zG636LUv1EOYN_SH_ELA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"horaRetiro\":\"00:10:12\",\r\n    \"inicioReserva\":\"2022-03-10\",\r\n    \"finReserva\":\"2022-03-15\",\r\n    \"producto\":{\"id\":7},\r\n    \"usuario\":{\"id\":27}\r\n  }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://3.14.246.73:8080/vintage/reserva",
+							"protocol": "http",
+							"host": [
+								"3",
+								"14",
+								"246",
+								"73"
+							],
+							"port": "8080",
+							"path": [
+								"vintage",
+								"reserva"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Put reservas",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ2ZXJpZmljYWRvIjp0cnVlLCJzdWIiOiJmZXJuYW5kb3Bham9uMDZAZ21haWwuY29tIiwibmFtZSI6IkZlcm5hbmRvIiwibGFzdF9uYW1lIjoiUGFqb24iLCJpZCI6MzIsImV4cCI6MTY3MDc4NDE4MywiaWF0IjoxNjcwNzgwNTgzLCJyb2wiOnsiaWQiOjEsIm5vbWJyZSI6IlJPTEVfQURNSU4ifX0.X8xWB5nTgO0e8-D0wN-L1O5zG636LUv1EOYN_SH_ELA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 49,\r\n    \"horaRetiro\":\"00:10:15\",\r\n    \"inicioReserva\":\"2022-08-26\",\r\n    \"finReserva\":\"2022-05-28\",\r\n    \"producto\":{\"id\":8},\r\n    \"usuario\":{\"id\":32}\r\n  }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://3.14.246.73:8080/vintage/reserva",
+							"protocol": "http",
+							"host": [
+								"3",
+								"14",
+								"246",
+								"73"
+							],
+							"port": "8080",
+							"path": [
+								"vintage",
+								"reserva"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Reserva",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ2ZXJpZmljYWRvIjp0cnVlLCJzdWIiOiJmZXJuYW5kb3Bham9uMDZAZ21haWwuY29tIiwibmFtZSI6IkZlcm5hbmRvIiwibGFzdF9uYW1lIjoiUGFqb24iLCJpZCI6MzIsImV4cCI6MTY3MDc4NDE4MywiaWF0IjoxNjcwNzgwNTgzLCJyb2wiOnsiaWQiOjEsIm5vbWJyZSI6IlJPTEVfQURNSU4ifX0.X8xWB5nTgO0e8-D0wN-L1O5zG636LUv1EOYN_SH_ELA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://3.14.246.73:8080/vintage/reserva/52",
+							"protocol": "http",
+							"host": [
+								"3",
+								"14",
+								"246",
+								"73"
+							],
+							"port": "8080",
+							"path": [
+								"vintage",
+								"reserva",
+								"52"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Post reserva (NO ADMIN)",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 403\", function () {\r",
+									"    pm.response.to.have.status(403);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJ2ZXJpZmljYWRvIjp0cnVlLCJzdWIiOiJmZXJuYW5kb3Bham9uMDZAZ21haWwuY29tIiwibmFtZSI6IkZlcm5hbmRvIiwibGFzdF9uYW1lIjoiUGFqb24iLCJpZCI6MzIsImV4cCI6MTY3MDc4NDE4MywiaWF0IjoxNjcwNzgwNTgzLCJyb2wiOnsiaWQiOjEsIm5vbWJyZSI6IlJPTEVfQURNSU4ifX0.X8xWB5nTgO0e8-D0wN-L1O5zG636LUv1EOYN_SH_ELA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"horaRetiro\":\"00:10:12\",\r\n    \"inicioReserva\":\"2022-03-10\",\r\n    \"finReserva\":\"2022-03-15\",\r\n    \"producto\":{\"id\":7},\r\n    \"usuario\":{\"id\":27}\r\n  }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://3.14.246.73:8080/vintage/reserva",
+							"protocol": "http",
+							"host": [
+								"3",
+								"14",
+								"246",
+								"73"
+							],
+							"port": "8080",
+							"path": [
+								"vintage",
+								"reserva"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

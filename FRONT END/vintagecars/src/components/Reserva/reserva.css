@@ -1,0 +1,396 @@
+
+.conteinerTitulo {
+  position: absolute;
+  top: 100px;
+  background-color: #5b3b2c;
+  color: #fff;
+}
+
+.horaLlegada{
+  width: 650px;
+  background-color: #5b3b2c1f;
+  color: #5b3b2c;
+  margin-top: 50px;
+  height: 150px;
+  padding: 10px;
+}
+
+hr {
+    width: 100%;
+    color: black;
+    border: 0;
+    border-top: 1px solid;
+    opacity: 0.25;
+    z-index: 9;
+}
+
+.imgreserva{
+  width: 330px;
+  height: 250px;
+}
+.estrellas {
+  position: absolute;
+  right: 40px;
+  top: 19px;
+  color: #5b3b2c;
+}
+.datosUsuario{
+  width: 650px;
+  height: 500px;
+  background-color: #5b3b2c1f ;
+  display:flex;
+  flex-direction: column;
+  color:#5b3b2c
+ 
+}
+.datosCalendarios{
+  flex-wrap: nowrap;
+  flex-direction: column;
+}
+
+.datosUsuario h2{
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+.datosUsuario h3{
+  margin:15px;
+}
+
+.datosUsuario input{
+  margin-top: 20px;
+  height: 25px;
+  border: none;
+  background-color:#5b3b2c1f ;
+}
+.datosPersona{
+  display:flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 60%;
+}
+
+.datosColumna{
+ 
+  height: 500px;
+  width: 550px;
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+}
+.datosCalendario{
+  background-color: #5b3b2c1f;
+  color: #5b3b2c;
+  height:300px;
+  width: 650px;
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+
+.datosCalendario1{
+  
+  display:flex;
+  flex-direction: row;
+  align-items:center;
+  justify-content: space-around;
+  
+
+}
+.datosCalendario1 h4 {
+  color:#5b3b2c;
+  margin-right: 20px;
+}
+.datosCalendario2{
+  display:flex;
+  flex-direction: row;
+  align-items:center;
+  justify-content: space-around;
+  
+
+}
+
+.datosCalendarios h2{
+  margin-top: 20px;
+  margin-bottom: 50px;
+
+}
+.datosCalendarios h5{
+  margin-top: 20px;
+  margin-bottom: 35px;
+
+}
+.datosCalendarios h3{
+  margin-top: 20px;
+  margin-bottom: 35px;
+
+}
+
+.datosCalendarios input{
+  border: none;
+  background-color: #5b3b2c1f;
+}
+
+.TimePicker{
+  border: none;
+}
+
+.input{
+  border: none;
+  background-color: #5b3b2c1f;
+}
+
+.columnaDetalle{
+  background-color: #5b3b2c1f;
+  
+  color:#5b3b2c;
+  margin-top: 15%;
+  margin-bottom: 15%;
+  display:flex;
+  flex-direction: column;
+  align-items:center;
+  justify-content: space-around;
+}
+.imagen-grande{
+  width: 100%;
+  border-radius: 10px;
+}
+.skeleton{
+width: 20%;
+height: 220px;
+margin-bottom: 50px;
+border-radius: 10px;
+background: linear-gradient(-45deg, hsl(210, 15%, 88%), hsl(210, 15%, 95%), hsl(210, 15%, 88%));
+background-size: 200%;
+animation: loader 1s ease infinite;
+}
+@keyframes loader {
+  from {
+    background-position: -100% 0;
+  }
+  to {
+    background-position: 100% 0;
+  }
+}
+.skeleton2{
+  width: 40%;
+  height: 320px;
+  margin-bottom: 50px;
+  border-radius: 10px;
+  background: linear-gradient(-45deg, hsl(210, 15%, 88%), hsl(210, 15%, 95%), hsl(210, 15%, 88%));
+  background-size: 200%;
+  animation: loader 1s ease infinite;
+  }
+  @keyframes loader {
+    from {
+      background-position: -100% 0;
+    }
+    to {
+      background-position: 100% 0;
+    }
+  }
+.skeletoncontainer{
+width: 100%;
+display: flex;
+flex-direction: row;
+flex-wrap: wrap;
+justify-content: space-evenly;
+padding-bottom: 100px;
+}
+.skeletoncontainer2{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  }
+.checkin{
+  margin-top: 15%;
+
+}
+.checkout{
+  margin-top: 15%;
+
+}
+.botondetalle{
+  margin-top: 15%;
+
+}
+
+@media (max-width:650px){
+  .skeletoncontainer{
+    flex-direction: column;
+    justify-content: center;
+  }
+  .skeletoncontainer2{
+    flex-direction: column;
+    justify-content: center;
+  }
+  .skeleton{
+    width: 90%;
+  }
+  .skeleton2{
+    width: 90%;
+  }
+  .horaLlegada {
+    max-width: 100%;
+    background-color: #5b3b2c1f;
+    color: #5b3b2c;
+    margin-top: 50px;
+    padding: 10px;
+    margin-top: 140px;
+    height: 250px;
+}
+  .bodyReserva{
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    --bs-gutter-x: 0;
+    padding: 0;
+    margin: 0;
+  }
+  .datosCalendario{
+    background-color: rgb(244, 237, 203);
+    color: #5b3b2c;
+    height:300px;
+    width: 300px;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: nowrap;
+    --bs-gutter-x: 0;
+    padding: 0;
+    margin: 200px 0 0 0;
+  }
+  .datosColumna{
+ 
+    height: 500px;
+    width: 300px;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    --bs-gutter-x: 0;
+    padding: 0;
+    margin: 0;
+  }
+  .datosUsuario{
+    width: 300px;
+    height: 500px;
+    margin-top: 100px;
+    background-color: #5b3b2c1f ;
+    display:flex;
+    flex-direction: column;
+    color:#5b3b2c;
+    --bs-gutter-x: 0;
+    padding: 0;
+  }
+  .datosPersona{
+    flex-wrap: wrap;
+  
+  }
+
+  .datosCalendario1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    text-align: center;
+    padding: 20px 0 20px 0;
+  }
+  .datosCalendarios{
+    width: 300px;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+  }
+  .columnaDatos{
+        flex: 0 0 auto;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+  }
+  .columnaDetalle{
+    width: 100%;
+  }
+}
+@media (min-width:576px) and (max-width:768px){
+  .container {
+    max-width: 100% !important;
+}
+}
+@media (min-width:650px) and (max-width:1200px){
+  .bodyReserva{
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    --bs-gutter-x: 0;
+    padding: 0;
+  }
+  .datosCalendario{
+    background-color: rgb(244, 237, 203);
+    color: #5b3b2c;
+    height:300px;
+    width: 650px;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: nowrap;
+    --bs-gutter-x: 0;
+    padding: 0;
+    margin: 50px 0 0 0;
+  }
+  .datosColumna{
+ 
+    height: 500px;
+    width: 650px;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    --bs-gutter-x: 0;
+    padding: 0;
+    margin: 0;
+  }
+  .datosUsuario{
+    width: 650px;
+    height: 400px;
+    margin-top: 0px;
+    background-color: #5b3b2c1f ;
+    display:flex;
+    flex-direction: column;
+    color:#5b3b2c;
+    --bs-gutter-x: 0;
+    padding: 0;
+  }
+  .datosPersona{
+    flex-wrap: wrap;
+  
+  }
+
+  .datosCalendario1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    text-align: center;
+    padding: 20px 0 20px 0;
+  }
+  .datosCalendarios{
+    width: 300px;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+  }
+  .columnaDatos{
+    flex: 0 0 auto;
+    width: 650px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+  }
+  .columnaDetalle{
+    width: 100%;
+  }
+}

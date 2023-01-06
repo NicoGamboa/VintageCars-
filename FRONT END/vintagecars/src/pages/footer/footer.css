@@ -1,0 +1,36 @@
+
+.footer {
+  height: 70px;
+  background-color: black;
+  display: flex;
+  justify-content: space-around;
+  align-content: space-around;
+  align-items: center;
+  position:fixed;
+  left:0px;
+  bottom:0px;
+  
+}
+.rowFooter{
+  width: 50px;
+  flex-wrap: nowrap;
+}
+
+.listaRedesSocial{
+  width: auto;
+  padding: 4px;
+}
+.listaRedesSocial:hover {
+  opacity: 0.5;
+  -moz-opacity: 0.5;
+}
+.copyFooter{
+color:#ffffff;
+margin-left: 10px;
+
+}
+.text-white{
+  font-family: "MonteCarlo", cursive;
+  font-weight: 600;
+  font-size: 130%;
+}

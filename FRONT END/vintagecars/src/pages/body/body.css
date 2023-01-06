@@ -1,0 +1,120 @@
+.containerBody {
+  /* background-color: #f4edcb; */
+  background-image: url("../../assets/fondo2.jpg");
+  /* background-color: chocolate; */
+  width: 100%;
+  height: 900px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-top: 107px;
+}
+body{
+  background-color: rgb(244, 237, 203);
+}
+.tituloCategoria {
+  position: relative;
+  text-align: center;
+  padding: 5rem 0;
+  font-family: "Roboto";
+  font-weight: 600;
+  font-size: 30px;
+  color: #5b3b2c;
+  line-height: 28px;
+  z-index: -1;
+}
+.tituloRecomendacion {
+  text-align: center;
+  padding: 3rem 0;
+  margin: 0 20px;
+  margin-top: 25px;
+  margin-bottom: 25px;
+  font-family: "Roboto";
+  font-weight: 600;
+  font-size: 30px;
+  color: #5b3b2c;
+  line-height: 28px;
+  /* border: 1px solid blue; */
+}
+@media (min-width: 376px){
+  .containerBody {
+    height: 50vh;
+  }
+}
+@media (min-width: 320px) and (max-width: 767px) {
+  .containerBody {
+    background-image: url("../../assets/fondo2.jpg");
+    /* background: aqua; */
+    width: 100%;
+    height: 500px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .tituloCategoria {
+    position: relative;
+    text-align: center;
+    padding: 3rem 0;
+    font-family: "Roboto";
+    font-weight: 600;
+    font-size: 30px;
+    color: #5b3b2c;
+    line-height: 28px;
+    /* border: 1px solid blue; */
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .containerBody {
+    background-image: url("../../assets/fondo2.jpg");
+    width: 100%;
+    height: 600px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .tituloCategoria {
+    position: relative;
+    text-align: center;
+    padding: 5rem 0 3rem 0;
+    font-family: "Roboto";
+    font-weight: 600;
+    font-size: 30px;
+    color: #5b3b2c;
+    line-height: 28px;
+    /* border: 1px solid blue; */
+  }
+}
+@media (min-width:1023px) and (max-width:1150px){
+  .tituloCategoria{
+    position: relative;
+    padding: 5rem 0 3rem 0;
+  }
+}
+@media (min-width:1150px) and (max-width:1440px){
+  .tituloCategoria{
+    position: relative;
+    padding: 5rem 0 3rem 0;
+  }
+}
+ @media  (min-width: 1440px) {
+  .containerBody {
+    background-image: url("../../assets/fondo2.jpg");
+    width: 100%;
+    height: 900px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .tituloCategoria {
+    position: relative;
+    text-align: center;
+    padding: 5rem 0 3rem 0;
+    font-family: "Roboto";
+    font-weight: 600;
+    font-size: 30px;
+    color: #5b3b2c;
+    line-height: 28px;
+  }
+} 

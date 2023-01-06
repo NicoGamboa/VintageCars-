@@ -1,0 +1,74 @@
+[
+    {
+        "id": 1,
+        "img": "https://i.ibb.co/zH7HMQK/pngwing-1.png",
+        "category": "Clásicos Europeos",
+        "title": "Seat 600",
+        "location": "Buenos Aires",
+        "description": "3 puertas, posee 4 plazas, consumo medio estimado: 8 L/100Km y velocidad maxima de 120 Km/h"
+    },
+    {
+        "id": 2,
+        "img": "https://i.ibb.co/ZfB3Rmr/Lincon-Intercontinetal-Sin-Fondo.png",
+        "category": "Clásicos Americano",
+        "title": "Lincoln Continental 1961",
+        "location": "Cordoba",
+        "description": "4 puertas, descapotable, consumo medio estimado: 20,8 l/100 km y velocidad maxima de 185 Km/h"
+    
+    },
+    {
+
+        "id": 3,
+        "img": "https://i.ibb.co/qM2HsF1/1970-ss-chevelle-chevelle-ss-1970-chevrolet-removebg-preview-1.png",
+        "category": "Deportivos",
+        "title": "Chevrolet 1970 SS",
+        "location": "Mendoza",
+        "description": "3 puertas, posee 4 plazas, consumo medio estimado: 10 L/100Km. Velocidad maxima de 217 Km/h "
+    
+        
+    },
+    {
+        "id": 4,
+        "img": "https://i.ibb.co/SVycPx0/Png-Item-1770801.png",
+        "category": "Camionetas",
+        "title": "Chevrolet 1938 1/2 Ton",
+        "location": "Mendoza",
+        "description": "Camioneta 2 puertas, posee un consumo medio estamdo: 25,2 l/100 km. El motor produce 78 HP."
+    
+    },
+    {
+        "id": 5,
+        "img": "https://i.ibb.co/XZ95vJ5/Cadillac-Sin-Fondo.png",
+        "category": "Clásicos Americano",
+        "title": "Cadillac Eldorado 1952",
+        "location": "Mendoza",
+        "description": "2 puertas para 5 personas, consumo medio estamdo: 17,1 l/100 km y velocidad maxima de 225 Km/h "
+    
+        
+    },
+    {
+        "id": 6,
+        "img": "https://i.ibb.co/9cv8JmP/Camoneta-Ford-Sin-Fondo.png",
+        "category": "Camionetas",
+        "title": "Ford F-150 1980",
+        "location": "Buenos Aires",
+        "description": "2 puertas que posee 2 plazas, consumo medio estimado: 15,4 l/100 km y  velocidad maxima de 150 Km/h"
+    },
+    { 
+        "id": 7,
+        "img": "https://i.ibb.co/6P0ZRGJ/Ferrari250-GTOSin-Fondo.png",
+        "category": "Deportivos",
+        "title": "Ferrari 250 GTO",
+        "location": "Mendoza",
+        "description": "Uno de los mejores automóviles, de 2 puertas con 2 plazas.Velocidad maxima de 280 Km/h"
+
+    },
+    {
+        "id": 8,
+        "img": "https://i.ibb.co/THNSdQK/auto-Mercedes-removebg-preview-1.png",
+        "category": "Clásicos Europeos",
+        "title": "Mercedes Benz 280",
+        "location": "Santa Fe",
+        "description": " 2 puertas para dos personas, consumo medio estimado: 13,4 l/100 km y  velocidad maxima de 230 Km/h"
+    }
+]

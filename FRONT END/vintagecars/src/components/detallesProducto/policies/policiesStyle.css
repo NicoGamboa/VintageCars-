@@ -1,0 +1,33 @@
+.policiesStyles {
+  padding: 15px 30px 80px 30px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 40px;
+  justify-items:center;
+}
+.tituloPolicies{
+  text-align: left;
+  color:#5b3b2c ;
+  font-weight: 600;
+  font-size: 20px;
+}
+
+@media (max-width: 700px){
+  .policiesStyles {
+    display: flex;
+    grid: none;
+    flex-direction: column;
+    text-align: center;
+    height: 650px;
+    grid-gap: 40px;
+    padding: 0px 0px 400px 0px;
+    margin-bottom: 10px;
+}
+  .tituloPolicies{
+    text-align: center;
+    color:#5b3b2c ;
+    font-weight: 600;
+    font-size: 20px;
+  }
+
+}

@@ -1,0 +1,65 @@
+
+  .titulo{
+    margin-top: 10rem;
+    padding: 15px;
+  }
+  .Reservacontainer{
+      display: flex;
+       flex-direction: row;
+      justify-content: center;
+      align-items: center;
+  }
+  
+  .nohayreserva{
+    margin-top: 7rem;
+
+  }
+  .cardReserva{
+   
+      width: 25rem;
+      margin: 1rem;
+      padding: 0;
+      border-radius: 0.5rem ;
+      box-shadow: 0px 10px 10px -6px black;
+      cursor: pointer;
+  }
+  
+  /* .imgReserva{
+      width:8rem;
+      height: 8rem;
+      border-radius: 0.5rem 0.5rem 0 0 ;
+  } */
+  
+  .bodyCardCategoria{
+  height: 70px;
+  padding:0.4rem 1rem;
+  }
+  
+  .cardTituloCategoria{
+      margin: 0;
+  }
+  .textoReserva{
+      height: 14px;
+      color: #383B58;
+      opacity: 0.6;
+  }
+  .cardTituloCategoria{
+    font-family: "Roboto";
+    font-weight: 600;
+  }
+  .reservarow{
+    display: flex;
+    flex-wrap: wrap;
+  }
+  @media (max-width: 650px){
+    .cardReserva{
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      margin: 1rem;
+      padding: 0;
+      border-radius: 0.5rem ;
+      box-shadow: 0px 10px 10px -6px black;
+      cursor: pointer;
+  }
+  }
